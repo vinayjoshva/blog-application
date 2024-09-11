@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<nav class="head-container">
+  <h1><a href="/">My blog.</a></h1>
+</nav>
+
+<div class="container">
+  <form action="/edit/<%= id %>" method="POST">
+    <input type="text" name="title" value="<%= title %>" required>
+    <button type="submit">Update Post</button>
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>
